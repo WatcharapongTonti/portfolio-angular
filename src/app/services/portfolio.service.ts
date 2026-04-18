@@ -63,6 +63,7 @@ export class PortfolioService {
   readonly displayName = 'Watcharapong';
   readonly initials = 'WT';
   readonly avatarUrl = 'https://res.cloudinary.com/dqiifup5j/image/upload/q_auto/f_auto/v1776535254/IMG_3458_keovud.jpg';
+  readonly faviconUrl = 'https://res.cloudinary.com/dqiifup5j/image/upload/q_auto/f_auto/v1776536383/android-chrome-512x512_vnkyf1.png';
   readonly title = 'Full Stack Developer';
   readonly careerStartDate = new Date(2022, 4, 1); // May 1, 2022
   readonly bio = 'Full Stack Developer who thrives on challenging problems. I stay focused, dig deep, and build solutions that actually work at scale.';
