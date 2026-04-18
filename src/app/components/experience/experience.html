@@ -1,0 +1,69 @@
+<section id="experience" class="py-24 scroll-mt-16 bg-slate-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <p class="text-indigo-400 font-mono text-sm tracking-widest uppercase mb-2">Career</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        Work <span class="text-indigo-400">Experience</span>
+      </h2>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-6 top-2 bottom-2 w-px bg-linear-to-b from-indigo-500/50 via-slate-700 to-transparent hidden md:block"></div>
+
+      <div class="space-y-8">
+        @for (exp of portfolio.experiences; track exp.company + exp.period) {
+          <div class="exp-card relative md:pl-20">
+            <!-- Timeline dot -->
+            <div class="hidden md:block absolute left-0 top-6 w-12 text-right pr-4">
+              <div class="inline-block w-3.5 h-3.5 rounded-full border-2 translate-x-0.75"
+                   [class]="exp.current
+                     ? 'bg-indigo-500 border-indigo-400 shadow-lg shadow-indigo-500/40'
+                     : 'bg-slate-700 border-slate-600'">
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="rounded-2xl border transition-all duration-300"
+                 [class]="exp.current
+                   ? 'bg-slate-800/80 border-indigo-500/30'
+                   : 'bg-slate-800/40 border-slate-700/60'">
+
+              <!-- Card header -->
+              <div class="p-6 pb-4">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <h3 class="text-white font-semibold text-lg leading-tight">{{ exp.position }}</h3>
+                      @if (exp.current) {
+                        <span class="px-2 py-0.5 bg-emerald-500/15 text-emerald-400 text-xs rounded-full border border-emerald-500/25 font-medium">
+                          Current
+                        </span>
+                      }
+                    </div>
+                    <p class="text-indigo-400 font-medium text-sm mt-0.5">{{ exp.company }}</p>
+                  </div>
+                  <span class="text-gray-500 text-sm font-mono shrink-0 mt-1">{{ exp.period }}</span>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="h-px mx-6 bg-slate-700/50"></div>
+
+              <!-- Bullets -->
+              <ul class="p-6 pt-4 space-y-3">
+                @for (item of exp.description; track item) {
+                  <li class="flex gap-3 text-sm">
+                    <span class="text-indigo-400 mt-1 shrink-0">▸</span>
+                    <span class="text-gray-400 leading-relaxed">{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
