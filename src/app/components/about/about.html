@@ -17,8 +17,18 @@
           <div class="w-64 h-64 rounded-3xl p-[3px]"
                style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #6366f1);">
             <div class="w-full h-full rounded-3xl overflow-hidden">
-              <img [src]="portfolio.avatarUrl" [alt]="portfolio.name"
-                   class="w-full h-full object-cover object-top">
+              @if (imgError) {
+                <div class="w-full h-full bg-slate-900 flex items-center justify-center">
+                  <div class="text-6xl font-bold text-transparent bg-clip-text"
+                       style="background: linear-gradient(135deg, #a5b4fc, #818cf8); -webkit-background-clip: text;">
+                    {{ portfolio.initials }}
+                  </div>
+                </div>
+              } @else {
+                <img [src]="portfolio.avatarUrl" [alt]="portfolio.name"
+                     class="w-full h-full object-cover object-top"
+                     (error)="imgError = true">
+              }
             </div>
           </div>
           <!-- Floating badge -->

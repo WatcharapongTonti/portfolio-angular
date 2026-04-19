@@ -98,7 +98,7 @@ for solutions that are reliable, scalable, and maintainable in the long run.`;
     {
       name: 'DevOps & Tools',
       icon: '🚀',
-      skills: ['Kubernetes', 'Docker', 'CI/CD', 'ELK Stack', 'IIS', 'Jenkins', 'Git', 'ArgoCD'],
+      skills: ['Kubernetes', 'Docker', 'CI/CD', 'ELK Stack', 'IIS', 'Jenkins', 'Git', 'ArgoCD', 'k6'],
     },
   ];
 
@@ -108,7 +108,7 @@ for solutions that are reliable, scalable, and maintainable in the long run.`;
       title: 'Promotion Management System',
       company: 'Thai Beverage Public Company Limited',
       description: 'An enterprise platform for planning, executing, and tracking promotions (discounts, free gifts) with flexible conditions and time ranges for marketing teams.',
-      tags: ['React.js', 'Golang', 'Redis', 'Kubernetes', 'ELK Stack', 'CI/CD', 'MS SQL Server', 'Kafka', 'ArgoCD'],
+      tags: ['React.js', 'Golang', 'Redis', 'Kubernetes', 'ELK Stack', 'CI/CD', 'MS SQL Server', 'Kafka', 'ArgoCD', 'k6'],
       githubUrl: 'https://github.com/WatcharapongTonti',
       highlights: [
         'Designed database schema and architecture to support complex condition-based rules and multi-promotion combinations',

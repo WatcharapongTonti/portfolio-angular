@@ -19,11 +19,15 @@ export class App implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(`${this.portfolio.name} - ${this.portfolio.title}`);
 
-    const link: HTMLLinkElement =
-      this.document.querySelector('link[rel="icon"]') ??
-      Object.assign(this.document.createElement('link'), { rel: 'icon' });
-    link.type = 'image/png';
-    link.href = this.portfolio.faviconUrl;
-    this.document.head.appendChild(link);
+    const img = new Image();
+    img.onload = () => {
+      const link: HTMLLinkElement =
+        this.document.querySelector('link[rel="icon"]') ??
+        Object.assign(this.document.createElement('link'), { rel: 'icon' });
+      link.type = 'image/png';
+      link.href = this.portfolio.faviconUrl;
+      this.document.head.appendChild(link);
+    };
+    img.src = this.portfolio.faviconUrl;
   }
 }

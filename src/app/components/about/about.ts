@@ -8,4 +8,5 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class AboutComponent {
   readonly portfolio = inject(PortfolioService);
+  imgError = false;
 }
